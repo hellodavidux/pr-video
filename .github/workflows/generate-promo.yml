@@ -1,0 +1,39 @@
+name: Generate Promo Video
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  generate:
+    if: contains(github.event.pull_request.labels.*.name, 'needs-promo-video')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate promo props from PR
+        env:
+          VITE_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VITE_ANTHROPIC_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          node scripts/generatePromoVideo.mjs \
+            --pr-url "${{ github.event.pull_request.html_url }}" \
+            --skip-llm
+
+      - name: Render promo video
+        run: npx remotion render src/remotion/PromoRoot.jsx promo-video out/promo.mp4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: promo-video
+          path: out/promo.mp4

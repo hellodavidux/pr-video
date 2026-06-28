@@ -1,0 +1,45 @@
+{
+  "name": "pr-video",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/run-dev.mjs",
+    "dev:ui": "vite",
+    "dev:all": "node server/run-dev.mjs",
+    "server": "node server/index.mjs",
+    "postinstall": "playwright install chromium",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "remotion": "remotion studio src/remotion/index.jsx",
+    "remotion:demo": "remotion studio src/remotion/DemoRoot.jsx",
+    "setup:local-demo": "npx vite-node scripts/setupLocalDemo.mjs",
+    "render": "remotion render src/remotion/index.jsx PRVideo out/video.mp4"
+  },
+  "dependencies": {
+    "@babel/standalone": "^7.27.0",
+    "@remotion/cli": "^4.0.484",
+    "@remotion/player": "^4.0.484",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "get-port": "^7.1.0",
+    "lucide-react": "^1.21.0",
+    "playwright": "^1.51.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-live": "^4.1.8",
+    "remotion": "^4.0.484"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "vite": "^6.3.5"
+  }
+}

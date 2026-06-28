@@ -1,0 +1,818 @@
+{
+  "s0": {
+    "slideId": "s0",
+    "styles": "#pr-preview-root {\n  margin: 0;\n  background: #0a0a0a;\n  color: #fafafa;\n  font-family: Inter, system-ui, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  color-scheme: dark;\n}\n#pr-preview-root *, #pr-preview-root *::before, #pr-preview-root *::after { box-sizing: border-box; }\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.18;\n  filter: blur(4px);\n  transform: scale(0.98);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-focus-ref] [data-demo-ref] {\n  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-ref] {\n  opacity: 0.12;\n  filter: blur(2px);\n  pointer-events: none;\n}\n\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.22;\n  filter: blur(3px);\n  transform: scale(0.985);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-phase=\"establish\"] [data-demo-region=\"main-content\"] {\n  opacity: 1;\n  filter: none;\n  transform: none;\n}\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"click\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"] {\n  position: relative;\n  z-index: 30;\n  transform: scale(1.04);\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"trigger\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"],\n#pr-preview-root [data-demo-highlight=\"trigger\"] button.bg-white {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"input\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"input\"] [data-demo-target=\"input\"],\n#pr-preview-root [data-demo-highlight=\"input\"] input {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"dropdown\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"dropdown\"] [data-demo-target=\"dropdown\"],\n#pr-preview-root [data-demo-highlight=\"dropdown\"] select {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"submit\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"submit\"] [data-demo-target=\"submit\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-phase=\"payoff\"] .space-y-4 > :last-child {\n  animation: demoPayoffIn 0.45s ease-out both;\n}\n@keyframes demoPayoffIn {\n  from { opacity: 0; transform: translateY(8px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n#pr-preview-root .bg-cal-bg { background-color: #0a0a0a !important; }\n#pr-preview-root .text-cal-bg { color: #0a0a0a !important; }\n#pr-preview-root .border-cal-bg { border-color: #0a0a0a !important; }\n#pr-preview-root .ring-cal-bg { --tw-ring-color: #0a0a0a; }\n#pr-preview-root .ring-offset-cal-bg { --tw-ring-offset-color: #0a0a0a; }\n#pr-preview-root .placeholder\\:text-cal-bg::placeholder { color: #0a0a0a !important; }\n#pr-preview-root .hover\\:text-cal-bg:hover { color: #0a0a0a !important; }\n#pr-preview-root .bg-cal-surface { background-color: #141414 !important; }\n#pr-preview-root .text-cal-surface { color: #141414 !important; }\n#pr-preview-root .border-cal-surface { border-color: #141414 !important; }\n#pr-preview-root .ring-cal-surface { --tw-ring-color: #141414; }\n#pr-preview-root .ring-offset-cal-surface { --tw-ring-offset-color: #141414; }\n#pr-preview-root .placeholder\\:text-cal-surface::placeholder { color: #141414 !important; }\n#pr-preview-root .hover\\:text-cal-surface:hover { color: #141414 !important; }\n#pr-preview-root .bg-cal-elevated { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-elevated { color: #1a1a1a !important; }\n#pr-preview-root .border-cal-elevated { border-color: #1a1a1a !important; }\n#pr-preview-root .ring-cal-elevated { --tw-ring-color: #1a1a1a; }\n#pr-preview-root .ring-offset-cal-elevated { --tw-ring-offset-color: #1a1a1a; }\n#pr-preview-root .placeholder\\:text-cal-elevated::placeholder { color: #1a1a1a !important; }\n#pr-preview-root .hover\\:text-cal-elevated:hover { color: #1a1a1a !important; }\n#pr-preview-root .bg-cal-border { background-color: #262626 !important; }\n#pr-preview-root .text-cal-border { color: #262626 !important; }\n#pr-preview-root .border-cal-border { border-color: #262626 !important; }\n#pr-preview-root .ring-cal-border { --tw-ring-color: #262626; }\n#pr-preview-root .ring-offset-cal-border { --tw-ring-offset-color: #262626; }\n#pr-preview-root .placeholder\\:text-cal-border::placeholder { color: #262626 !important; }\n#pr-preview-root .hover\\:text-cal-border:hover { color: #262626 !important; }\n#pr-preview-root .bg-cal-muted { background-color: #a3a3a3 !important; }\n#pr-preview-root .text-cal-muted { color: #a3a3a3 !important; }\n#pr-preview-root .border-cal-muted { border-color: #a3a3a3 !important; }\n#pr-preview-root .ring-cal-muted { --tw-ring-color: #a3a3a3; }\n#pr-preview-root .ring-offset-cal-muted { --tw-ring-offset-color: #a3a3a3; }\n#pr-preview-root .placeholder\\:text-cal-muted::placeholder { color: #a3a3a3 !important; }\n#pr-preview-root .hover\\:text-cal-muted:hover { color: #a3a3a3 !important; }\n#pr-preview-root .bg-cal-subtle { background-color: #737373 !important; }\n#pr-preview-root .text-cal-subtle { color: #737373 !important; }\n#pr-preview-root .border-cal-subtle { border-color: #737373 !important; }\n#pr-preview-root .ring-cal-subtle { --tw-ring-color: #737373; }\n#pr-preview-root .ring-offset-cal-subtle { --tw-ring-offset-color: #737373; }\n#pr-preview-root .placeholder\\:text-cal-subtle::placeholder { color: #737373 !important; }\n#pr-preview-root .hover\\:text-cal-subtle:hover { color: #737373 !important; }\n#pr-preview-root .bg-cal-accent { background-color: #ffffff !important; }\n#pr-preview-root .text-cal-accent { color: #ffffff !important; }\n#pr-preview-root .border-cal-accent { border-color: #ffffff !important; }\n#pr-preview-root .ring-cal-accent { --tw-ring-color: #ffffff; }\n#pr-preview-root .ring-offset-cal-accent { --tw-ring-offset-color: #ffffff; }\n#pr-preview-root .placeholder\\:text-cal-accent::placeholder { color: #ffffff !important; }\n#pr-preview-root .hover\\:text-cal-accent:hover { color: #ffffff !important; }\n#pr-preview-root input, #pr-preview-root select, #pr-preview-root textarea {\n  background-color: #0a0a0a !important;\n  border-color: #262626 !important;\n  color: #fafafa !important;\n  color-scheme: dark;\n}\n#pr-preview-root option { background-color: #1a1a1a; color: #fafafa; }\n#pr-preview-root .bg-cal-elevated, #pr-preview-root [class*=\"bg-cal-elevated\"] { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-muted, #pr-preview-root [class*=\"text-cal-muted\"] { color: #a3a3a3 !important; }",
+    "tailwindConfig": {
+      "important": "#pr-preview-root",
+      "corePlugins": {
+        "preflight": false
+      },
+      "theme": {
+        "extend": {
+          "colors": {
+            "cal-bg": "#0a0a0a",
+            "cal-surface": "#141414",
+            "cal-elevated": "#1a1a1a",
+            "cal-border": "#262626",
+            "cal-muted": "#a3a3a3",
+            "cal-subtle": "#737373",
+            "cal-accent": "#ffffff"
+          },
+          "fontFamily": {
+            "sans": [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "sans-serif"
+            ]
+          }
+        }
+      }
+    },
+    "demoScript": {
+      "keyframes": [
+        {
+          "t": 0,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 0.3,
+          "x": 50,
+          "y": 45,
+          "hover": true
+        },
+        {
+          "t": 0.8200000000000001,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 0.9,
+          "x": 50,
+          "y": 45,
+          "click": true
+        },
+        {
+          "t": 3.2,
+          "x": 50,
+          "y": 45
+        }
+      ],
+      "camera": {
+        "keyframes": [
+          {
+            "t": 0,
+            "target": "main",
+            "scale": 1,
+            "padding": 44,
+            "phase": "establish"
+          },
+          {
+            "t": 0.3,
+            "target": "trigger",
+            "scale": 1.14,
+            "padding": 28,
+            "phase": "isolate"
+          },
+          {
+            "t": 1,
+            "target": "trigger",
+            "scale": 1.18,
+            "padding": 28,
+            "phase": "click"
+          },
+          {
+            "t": 1.5,
+            "target": "main",
+            "scale": 1.2,
+            "padding": 28,
+            "phase": "type"
+          },
+          {
+            "t": 3.2,
+            "target": "main",
+            "scale": 1.12,
+            "padding": 32,
+            "phase": "payoff"
+          }
+        ]
+      },
+      "hoverAt": 0.3,
+      "actions": [
+        {
+          "at": 0.3,
+          "type": "hover",
+          "target": "main"
+        },
+        {
+          "at": 0.9,
+          "type": "click",
+          "target": "main"
+        }
+      ],
+      "demoText": "Team standup hours",
+      "redirectDemoText": "Holiday coverage",
+      "interactionPlan": [],
+      "storyBeat": null,
+      "submitAt": null,
+      "payoffAt": null,
+      "phaseTimeline": {
+        "phases": [],
+        "hoverAt": 0.3,
+        "openAt": null,
+        "typeAt": null,
+        "dropdownAt": null,
+        "submitAt": null,
+        "payoffAt": null,
+        "expandAt": null
+      },
+      "expandAt": 1.2,
+      "demoBeats": [],
+      "elementRegistry": [],
+      "type": "static"
+    },
+    "registryVersion": 1782640307922
+  },
+  "s1": {
+    "slideId": "s1",
+    "styles": "#pr-preview-root {\n  margin: 0;\n  background: #0a0a0a;\n  color: #fafafa;\n  font-family: Inter, system-ui, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  color-scheme: dark;\n}\n#pr-preview-root *, #pr-preview-root *::before, #pr-preview-root *::after { box-sizing: border-box; }\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.18;\n  filter: blur(4px);\n  transform: scale(0.98);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-focus-ref] [data-demo-ref] {\n  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-ref] {\n  opacity: 0.12;\n  filter: blur(2px);\n  pointer-events: none;\n}\n\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.22;\n  filter: blur(3px);\n  transform: scale(0.985);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-phase=\"establish\"] [data-demo-region=\"main-content\"] {\n  opacity: 1;\n  filter: none;\n  transform: none;\n}\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"click\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"] {\n  position: relative;\n  z-index: 30;\n  transform: scale(1.04);\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"trigger\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"],\n#pr-preview-root [data-demo-highlight=\"trigger\"] button.bg-white {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"input\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"input\"] [data-demo-target=\"input\"],\n#pr-preview-root [data-demo-highlight=\"input\"] input {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"dropdown\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"dropdown\"] [data-demo-target=\"dropdown\"],\n#pr-preview-root [data-demo-highlight=\"dropdown\"] select {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"submit\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"submit\"] [data-demo-target=\"submit\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-phase=\"payoff\"] .space-y-4 > :last-child {\n  animation: demoPayoffIn 0.45s ease-out both;\n}\n@keyframes demoPayoffIn {\n  from { opacity: 0; transform: translateY(8px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n#pr-preview-root .bg-cal-bg { background-color: #0a0a0a !important; }\n#pr-preview-root .text-cal-bg { color: #0a0a0a !important; }\n#pr-preview-root .border-cal-bg { border-color: #0a0a0a !important; }\n#pr-preview-root .ring-cal-bg { --tw-ring-color: #0a0a0a; }\n#pr-preview-root .ring-offset-cal-bg { --tw-ring-offset-color: #0a0a0a; }\n#pr-preview-root .placeholder\\:text-cal-bg::placeholder { color: #0a0a0a !important; }\n#pr-preview-root .hover\\:text-cal-bg:hover { color: #0a0a0a !important; }\n#pr-preview-root .bg-cal-surface { background-color: #141414 !important; }\n#pr-preview-root .text-cal-surface { color: #141414 !important; }\n#pr-preview-root .border-cal-surface { border-color: #141414 !important; }\n#pr-preview-root .ring-cal-surface { --tw-ring-color: #141414; }\n#pr-preview-root .ring-offset-cal-surface { --tw-ring-offset-color: #141414; }\n#pr-preview-root .placeholder\\:text-cal-surface::placeholder { color: #141414 !important; }\n#pr-preview-root .hover\\:text-cal-surface:hover { color: #141414 !important; }\n#pr-preview-root .bg-cal-elevated { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-elevated { color: #1a1a1a !important; }\n#pr-preview-root .border-cal-elevated { border-color: #1a1a1a !important; }\n#pr-preview-root .ring-cal-elevated { --tw-ring-color: #1a1a1a; }\n#pr-preview-root .ring-offset-cal-elevated { --tw-ring-offset-color: #1a1a1a; }\n#pr-preview-root .placeholder\\:text-cal-elevated::placeholder { color: #1a1a1a !important; }\n#pr-preview-root .hover\\:text-cal-elevated:hover { color: #1a1a1a !important; }\n#pr-preview-root .bg-cal-border { background-color: #262626 !important; }\n#pr-preview-root .text-cal-border { color: #262626 !important; }\n#pr-preview-root .border-cal-border { border-color: #262626 !important; }\n#pr-preview-root .ring-cal-border { --tw-ring-color: #262626; }\n#pr-preview-root .ring-offset-cal-border { --tw-ring-offset-color: #262626; }\n#pr-preview-root .placeholder\\:text-cal-border::placeholder { color: #262626 !important; }\n#pr-preview-root .hover\\:text-cal-border:hover { color: #262626 !important; }\n#pr-preview-root .bg-cal-muted { background-color: #a3a3a3 !important; }\n#pr-preview-root .text-cal-muted { color: #a3a3a3 !important; }\n#pr-preview-root .border-cal-muted { border-color: #a3a3a3 !important; }\n#pr-preview-root .ring-cal-muted { --tw-ring-color: #a3a3a3; }\n#pr-preview-root .ring-offset-cal-muted { --tw-ring-offset-color: #a3a3a3; }\n#pr-preview-root .placeholder\\:text-cal-muted::placeholder { color: #a3a3a3 !important; }\n#pr-preview-root .hover\\:text-cal-muted:hover { color: #a3a3a3 !important; }\n#pr-preview-root .bg-cal-subtle { background-color: #737373 !important; }\n#pr-preview-root .text-cal-subtle { color: #737373 !important; }\n#pr-preview-root .border-cal-subtle { border-color: #737373 !important; }\n#pr-preview-root .ring-cal-subtle { --tw-ring-color: #737373; }\n#pr-preview-root .ring-offset-cal-subtle { --tw-ring-offset-color: #737373; }\n#pr-preview-root .placeholder\\:text-cal-subtle::placeholder { color: #737373 !important; }\n#pr-preview-root .hover\\:text-cal-subtle:hover { color: #737373 !important; }\n#pr-preview-root .bg-cal-accent { background-color: #ffffff !important; }\n#pr-preview-root .text-cal-accent { color: #ffffff !important; }\n#pr-preview-root .border-cal-accent { border-color: #ffffff !important; }\n#pr-preview-root .ring-cal-accent { --tw-ring-color: #ffffff; }\n#pr-preview-root .ring-offset-cal-accent { --tw-ring-offset-color: #ffffff; }\n#pr-preview-root .placeholder\\:text-cal-accent::placeholder { color: #ffffff !important; }\n#pr-preview-root .hover\\:text-cal-accent:hover { color: #ffffff !important; }\n#pr-preview-root input, #pr-preview-root select, #pr-preview-root textarea {\n  background-color: #0a0a0a !important;\n  border-color: #262626 !important;\n  color: #fafafa !important;\n  color-scheme: dark;\n}\n#pr-preview-root option { background-color: #1a1a1a; color: #fafafa; }\n#pr-preview-root .bg-cal-elevated, #pr-preview-root [class*=\"bg-cal-elevated\"] { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-muted, #pr-preview-root [class*=\"text-cal-muted\"] { color: #a3a3a3 !important; }",
+    "tailwindConfig": {
+      "important": "#pr-preview-root",
+      "corePlugins": {
+        "preflight": false
+      },
+      "theme": {
+        "extend": {
+          "colors": {
+            "cal-bg": "#0a0a0a",
+            "cal-surface": "#141414",
+            "cal-elevated": "#1a1a1a",
+            "cal-border": "#262626",
+            "cal-muted": "#a3a3a3",
+            "cal-subtle": "#737373",
+            "cal-accent": "#ffffff"
+          },
+          "fontFamily": {
+            "sans": [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "sans-serif"
+            ]
+          }
+        }
+      }
+    },
+    "demoScript": {
+      "keyframes": [
+        {
+          "t": 0,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 0.5,
+          "x": 50,
+          "y": 45,
+          "hover": true
+        },
+        {
+          "t": 1.2,
+          "x": 72,
+          "y": 18,
+          "hover": true
+        },
+        {
+          "t": 1.92,
+          "x": 72,
+          "y": 18
+        },
+        {
+          "t": 2,
+          "x": 72,
+          "y": 18,
+          "click": true
+        },
+        {
+          "t": 3.2,
+          "x": 72,
+          "y": 18
+        }
+      ],
+      "camera": {
+        "keyframes": [
+          {
+            "t": 0,
+            "target": "main",
+            "scale": 1,
+            "padding": 44,
+            "phase": "establish"
+          },
+          {
+            "t": 0.5,
+            "target": "trigger",
+            "scale": 1.14,
+            "padding": 28,
+            "phase": "isolate"
+          },
+          {
+            "t": 2,
+            "target": "trigger",
+            "scale": 1.18,
+            "padding": 28,
+            "phase": "click"
+          },
+          {
+            "t": 2.5,
+            "target": "trigger",
+            "scale": 1.2,
+            "padding": 28,
+            "phase": "type"
+          },
+          {
+            "t": 3.2,
+            "target": "trigger",
+            "scale": 1.12,
+            "padding": 32,
+            "phase": "payoff"
+          }
+        ]
+      },
+      "hoverAt": 0.5,
+      "actions": [
+        {
+          "at": 0.5,
+          "type": "hover",
+          "target": "main",
+          "label": "component body",
+          "component": "AskCalFab"
+        },
+        {
+          "at": 1.2,
+          "type": "hover",
+          "target": "trigger",
+          "label": "Ask Cal",
+          "component": "AskCalFab"
+        },
+        {
+          "at": 2,
+          "type": "click",
+          "target": "trigger",
+          "label": "Ask Cal",
+          "component": "AskCalFab",
+          "effect": "openModal"
+        }
+      ],
+      "demoText": "Click the Ask Cal button to open the assistant.",
+      "redirectDemoText": "Holiday coverage",
+      "interactionPlan": [],
+      "storyBeat": null,
+      "submitAt": null,
+      "payoffAt": null,
+      "phaseTimeline": {
+        "phases": [],
+        "hoverAt": 0.5,
+        "openAt": 2,
+        "typeAt": null,
+        "dropdownAt": null,
+        "submitAt": null,
+        "payoffAt": null,
+        "expandAt": null
+      },
+      "expandAt": 1.2,
+      "demoBeats": [],
+      "elementRegistry": [
+        {
+          "ref": "AskCalFab@button:ask-cal",
+          "component": "AskCalFab",
+          "path": "/src/features/ask-cal/components/AskCalFab.tsx",
+          "componentRole": "focus",
+          "role": "button",
+          "label": "Ask Cal"
+        },
+        {
+          "ref": "AskCalFab@main:component-body",
+          "component": "AskCalFab",
+          "path": "/src/features/ask-cal/components/AskCalFab.tsx",
+          "componentRole": "focus",
+          "role": "main",
+          "label": "component body"
+        }
+      ],
+      "type": "static"
+    },
+    "registryVersion": 1782640307922
+  },
+  "s2": {
+    "slideId": "s2",
+    "styles": "#pr-preview-root {\n  margin: 0;\n  background: #0a0a0a;\n  color: #fafafa;\n  font-family: Inter, system-ui, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  color-scheme: dark;\n}\n#pr-preview-root *, #pr-preview-root *::before, #pr-preview-root *::after { box-sizing: border-box; }\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.18;\n  filter: blur(4px);\n  transform: scale(0.98);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-focus-ref] [data-demo-ref] {\n  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-ref] {\n  opacity: 0.12;\n  filter: blur(2px);\n  pointer-events: none;\n}\n\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.22;\n  filter: blur(3px);\n  transform: scale(0.985);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-phase=\"establish\"] [data-demo-region=\"main-content\"] {\n  opacity: 1;\n  filter: none;\n  transform: none;\n}\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"click\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"] {\n  position: relative;\n  z-index: 30;\n  transform: scale(1.04);\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"trigger\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"],\n#pr-preview-root [data-demo-highlight=\"trigger\"] button.bg-white {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"input\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"input\"] [data-demo-target=\"input\"],\n#pr-preview-root [data-demo-highlight=\"input\"] input {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"dropdown\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"dropdown\"] [data-demo-target=\"dropdown\"],\n#pr-preview-root [data-demo-highlight=\"dropdown\"] select {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"submit\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"submit\"] [data-demo-target=\"submit\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-phase=\"payoff\"] .space-y-4 > :last-child {\n  animation: demoPayoffIn 0.45s ease-out both;\n}\n@keyframes demoPayoffIn {\n  from { opacity: 0; transform: translateY(8px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n#pr-preview-root .bg-cal-bg { background-color: #0a0a0a !important; }\n#pr-preview-root .text-cal-bg { color: #0a0a0a !important; }\n#pr-preview-root .border-cal-bg { border-color: #0a0a0a !important; }\n#pr-preview-root .ring-cal-bg { --tw-ring-color: #0a0a0a; }\n#pr-preview-root .ring-offset-cal-bg { --tw-ring-offset-color: #0a0a0a; }\n#pr-preview-root .placeholder\\:text-cal-bg::placeholder { color: #0a0a0a !important; }\n#pr-preview-root .hover\\:text-cal-bg:hover { color: #0a0a0a !important; }\n#pr-preview-root .bg-cal-surface { background-color: #141414 !important; }\n#pr-preview-root .text-cal-surface { color: #141414 !important; }\n#pr-preview-root .border-cal-surface { border-color: #141414 !important; }\n#pr-preview-root .ring-cal-surface { --tw-ring-color: #141414; }\n#pr-preview-root .ring-offset-cal-surface { --tw-ring-offset-color: #141414; }\n#pr-preview-root .placeholder\\:text-cal-surface::placeholder { color: #141414 !important; }\n#pr-preview-root .hover\\:text-cal-surface:hover { color: #141414 !important; }\n#pr-preview-root .bg-cal-elevated { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-elevated { color: #1a1a1a !important; }\n#pr-preview-root .border-cal-elevated { border-color: #1a1a1a !important; }\n#pr-preview-root .ring-cal-elevated { --tw-ring-color: #1a1a1a; }\n#pr-preview-root .ring-offset-cal-elevated { --tw-ring-offset-color: #1a1a1a; }\n#pr-preview-root .placeholder\\:text-cal-elevated::placeholder { color: #1a1a1a !important; }\n#pr-preview-root .hover\\:text-cal-elevated:hover { color: #1a1a1a !important; }\n#pr-preview-root .bg-cal-border { background-color: #262626 !important; }\n#pr-preview-root .text-cal-border { color: #262626 !important; }\n#pr-preview-root .border-cal-border { border-color: #262626 !important; }\n#pr-preview-root .ring-cal-border { --tw-ring-color: #262626; }\n#pr-preview-root .ring-offset-cal-border { --tw-ring-offset-color: #262626; }\n#pr-preview-root .placeholder\\:text-cal-border::placeholder { color: #262626 !important; }\n#pr-preview-root .hover\\:text-cal-border:hover { color: #262626 !important; }\n#pr-preview-root .bg-cal-muted { background-color: #a3a3a3 !important; }\n#pr-preview-root .text-cal-muted { color: #a3a3a3 !important; }\n#pr-preview-root .border-cal-muted { border-color: #a3a3a3 !important; }\n#pr-preview-root .ring-cal-muted { --tw-ring-color: #a3a3a3; }\n#pr-preview-root .ring-offset-cal-muted { --tw-ring-offset-color: #a3a3a3; }\n#pr-preview-root .placeholder\\:text-cal-muted::placeholder { color: #a3a3a3 !important; }\n#pr-preview-root .hover\\:text-cal-muted:hover { color: #a3a3a3 !important; }\n#pr-preview-root .bg-cal-subtle { background-color: #737373 !important; }\n#pr-preview-root .text-cal-subtle { color: #737373 !important; }\n#pr-preview-root .border-cal-subtle { border-color: #737373 !important; }\n#pr-preview-root .ring-cal-subtle { --tw-ring-color: #737373; }\n#pr-preview-root .ring-offset-cal-subtle { --tw-ring-offset-color: #737373; }\n#pr-preview-root .placeholder\\:text-cal-subtle::placeholder { color: #737373 !important; }\n#pr-preview-root .hover\\:text-cal-subtle:hover { color: #737373 !important; }\n#pr-preview-root .bg-cal-accent { background-color: #ffffff !important; }\n#pr-preview-root .text-cal-accent { color: #ffffff !important; }\n#pr-preview-root .border-cal-accent { border-color: #ffffff !important; }\n#pr-preview-root .ring-cal-accent { --tw-ring-color: #ffffff; }\n#pr-preview-root .ring-offset-cal-accent { --tw-ring-offset-color: #ffffff; }\n#pr-preview-root .placeholder\\:text-cal-accent::placeholder { color: #ffffff !important; }\n#pr-preview-root .hover\\:text-cal-accent:hover { color: #ffffff !important; }\n#pr-preview-root input, #pr-preview-root select, #pr-preview-root textarea {\n  background-color: #0a0a0a !important;\n  border-color: #262626 !important;\n  color: #fafafa !important;\n  color-scheme: dark;\n}\n#pr-preview-root option { background-color: #1a1a1a; color: #fafafa; }\n#pr-preview-root .bg-cal-elevated, #pr-preview-root [class*=\"bg-cal-elevated\"] { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-muted, #pr-preview-root [class*=\"text-cal-muted\"] { color: #a3a3a3 !important; }",
+    "tailwindConfig": {
+      "important": "#pr-preview-root",
+      "corePlugins": {
+        "preflight": false
+      },
+      "theme": {
+        "extend": {
+          "colors": {
+            "cal-bg": "#0a0a0a",
+            "cal-surface": "#141414",
+            "cal-elevated": "#1a1a1a",
+            "cal-border": "#262626",
+            "cal-muted": "#a3a3a3",
+            "cal-subtle": "#737373",
+            "cal-accent": "#ffffff"
+          },
+          "fontFamily": {
+            "sans": [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "sans-serif"
+            ]
+          }
+        }
+      }
+    },
+    "demoScript": {
+      "keyframes": [
+        {
+          "t": 0,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 0,
+          "x": 50,
+          "y": 45,
+          "hover": true
+        },
+        {
+          "t": 1.1199999999999999,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 1.2,
+          "x": 50,
+          "y": 45,
+          "click": true
+        },
+        {
+          "t": 3.2,
+          "x": 50,
+          "y": 45
+        }
+      ],
+      "camera": {
+        "keyframes": [
+          {
+            "t": 0,
+            "target": "main",
+            "scale": 1,
+            "padding": 44,
+            "phase": "establish"
+          },
+          {
+            "t": 0,
+            "target": "trigger",
+            "scale": 1.14,
+            "padding": 28,
+            "phase": "isolate"
+          },
+          {
+            "t": 1,
+            "target": "trigger",
+            "scale": 1.18,
+            "padding": 28,
+            "phase": "click"
+          },
+          {
+            "t": 1.5,
+            "target": "main",
+            "scale": 1.2,
+            "padding": 28,
+            "phase": "type"
+          },
+          {
+            "t": 3.2,
+            "target": "main",
+            "scale": 1.12,
+            "padding": 32,
+            "phase": "payoff"
+          }
+        ]
+      },
+      "hoverAt": 0,
+      "actions": [
+        {
+          "at": 0,
+          "type": "hover",
+          "target": "main",
+          "label": "component body"
+        },
+        {
+          "at": 1.2,
+          "type": "click",
+          "target": "main",
+          "label": "component body",
+          "effect": "highlight"
+        }
+      ],
+      "demoText": "Suggested prompts help users quickly ask about bookings, availability, or event types with a single click.",
+      "redirectDemoText": "Holiday coverage",
+      "interactionPlan": [],
+      "storyBeat": null,
+      "submitAt": null,
+      "payoffAt": null,
+      "phaseTimeline": {
+        "phases": [],
+        "hoverAt": 0,
+        "openAt": null,
+        "typeAt": null,
+        "dropdownAt": null,
+        "submitAt": null,
+        "payoffAt": null,
+        "expandAt": null
+      },
+      "expandAt": 1.2,
+      "demoBeats": [],
+      "elementRegistry": [
+        {
+          "ref": "SuggestedPrompts@main:component-body",
+          "component": "SuggestedPrompts",
+          "path": "/src/features/ask-cal/components/SuggestedPrompts.tsx",
+          "componentRole": "focus",
+          "role": "main",
+          "label": "component body"
+        }
+      ],
+      "type": "static"
+    },
+    "registryVersion": 1782640307922
+  },
+  "s3": {
+    "slideId": "s3",
+    "styles": "#pr-preview-root {\n  margin: 0;\n  background: #0a0a0a;\n  color: #fafafa;\n  font-family: Inter, system-ui, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  color-scheme: dark;\n}\n#pr-preview-root *, #pr-preview-root *::before, #pr-preview-root *::after { box-sizing: border-box; }\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.18;\n  filter: blur(4px);\n  transform: scale(0.98);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-focus-ref] [data-demo-ref] {\n  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-ref] {\n  opacity: 0.12;\n  filter: blur(2px);\n  pointer-events: none;\n}\n\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.22;\n  filter: blur(3px);\n  transform: scale(0.985);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-phase=\"establish\"] [data-demo-region=\"main-content\"] {\n  opacity: 1;\n  filter: none;\n  transform: none;\n}\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"click\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"] {\n  position: relative;\n  z-index: 30;\n  transform: scale(1.04);\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"trigger\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"],\n#pr-preview-root [data-demo-highlight=\"trigger\"] button.bg-white {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"input\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"input\"] [data-demo-target=\"input\"],\n#pr-preview-root [data-demo-highlight=\"input\"] input {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"dropdown\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"dropdown\"] [data-demo-target=\"dropdown\"],\n#pr-preview-root [data-demo-highlight=\"dropdown\"] select {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"submit\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"submit\"] [data-demo-target=\"submit\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-phase=\"payoff\"] .space-y-4 > :last-child {\n  animation: demoPayoffIn 0.45s ease-out both;\n}\n@keyframes demoPayoffIn {\n  from { opacity: 0; transform: translateY(8px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n#pr-preview-root .bg-cal-bg { background-color: #0a0a0a !important; }\n#pr-preview-root .text-cal-bg { color: #0a0a0a !important; }\n#pr-preview-root .border-cal-bg { border-color: #0a0a0a !important; }\n#pr-preview-root .ring-cal-bg { --tw-ring-color: #0a0a0a; }\n#pr-preview-root .ring-offset-cal-bg { --tw-ring-offset-color: #0a0a0a; }\n#pr-preview-root .placeholder\\:text-cal-bg::placeholder { color: #0a0a0a !important; }\n#pr-preview-root .hover\\:text-cal-bg:hover { color: #0a0a0a !important; }\n#pr-preview-root .bg-cal-surface { background-color: #141414 !important; }\n#pr-preview-root .text-cal-surface { color: #141414 !important; }\n#pr-preview-root .border-cal-surface { border-color: #141414 !important; }\n#pr-preview-root .ring-cal-surface { --tw-ring-color: #141414; }\n#pr-preview-root .ring-offset-cal-surface { --tw-ring-offset-color: #141414; }\n#pr-preview-root .placeholder\\:text-cal-surface::placeholder { color: #141414 !important; }\n#pr-preview-root .hover\\:text-cal-surface:hover { color: #141414 !important; }\n#pr-preview-root .bg-cal-elevated { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-elevated { color: #1a1a1a !important; }\n#pr-preview-root .border-cal-elevated { border-color: #1a1a1a !important; }\n#pr-preview-root .ring-cal-elevated { --tw-ring-color: #1a1a1a; }\n#pr-preview-root .ring-offset-cal-elevated { --tw-ring-offset-color: #1a1a1a; }\n#pr-preview-root .placeholder\\:text-cal-elevated::placeholder { color: #1a1a1a !important; }\n#pr-preview-root .hover\\:text-cal-elevated:hover { color: #1a1a1a !important; }\n#pr-preview-root .bg-cal-border { background-color: #262626 !important; }\n#pr-preview-root .text-cal-border { color: #262626 !important; }\n#pr-preview-root .border-cal-border { border-color: #262626 !important; }\n#pr-preview-root .ring-cal-border { --tw-ring-color: #262626; }\n#pr-preview-root .ring-offset-cal-border { --tw-ring-offset-color: #262626; }\n#pr-preview-root .placeholder\\:text-cal-border::placeholder { color: #262626 !important; }\n#pr-preview-root .hover\\:text-cal-border:hover { color: #262626 !important; }\n#pr-preview-root .bg-cal-muted { background-color: #a3a3a3 !important; }\n#pr-preview-root .text-cal-muted { color: #a3a3a3 !important; }\n#pr-preview-root .border-cal-muted { border-color: #a3a3a3 !important; }\n#pr-preview-root .ring-cal-muted { --tw-ring-color: #a3a3a3; }\n#pr-preview-root .ring-offset-cal-muted { --tw-ring-offset-color: #a3a3a3; }\n#pr-preview-root .placeholder\\:text-cal-muted::placeholder { color: #a3a3a3 !important; }\n#pr-preview-root .hover\\:text-cal-muted:hover { color: #a3a3a3 !important; }\n#pr-preview-root .bg-cal-subtle { background-color: #737373 !important; }\n#pr-preview-root .text-cal-subtle { color: #737373 !important; }\n#pr-preview-root .border-cal-subtle { border-color: #737373 !important; }\n#pr-preview-root .ring-cal-subtle { --tw-ring-color: #737373; }\n#pr-preview-root .ring-offset-cal-subtle { --tw-ring-offset-color: #737373; }\n#pr-preview-root .placeholder\\:text-cal-subtle::placeholder { color: #737373 !important; }\n#pr-preview-root .hover\\:text-cal-subtle:hover { color: #737373 !important; }\n#pr-preview-root .bg-cal-accent { background-color: #ffffff !important; }\n#pr-preview-root .text-cal-accent { color: #ffffff !important; }\n#pr-preview-root .border-cal-accent { border-color: #ffffff !important; }\n#pr-preview-root .ring-cal-accent { --tw-ring-color: #ffffff; }\n#pr-preview-root .ring-offset-cal-accent { --tw-ring-offset-color: #ffffff; }\n#pr-preview-root .placeholder\\:text-cal-accent::placeholder { color: #ffffff !important; }\n#pr-preview-root .hover\\:text-cal-accent:hover { color: #ffffff !important; }\n#pr-preview-root input, #pr-preview-root select, #pr-preview-root textarea {\n  background-color: #0a0a0a !important;\n  border-color: #262626 !important;\n  color: #fafafa !important;\n  color-scheme: dark;\n}\n#pr-preview-root option { background-color: #1a1a1a; color: #fafafa; }\n#pr-preview-root .bg-cal-elevated, #pr-preview-root [class*=\"bg-cal-elevated\"] { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-muted, #pr-preview-root [class*=\"text-cal-muted\"] { color: #a3a3a3 !important; }",
+    "tailwindConfig": {
+      "important": "#pr-preview-root",
+      "corePlugins": {
+        "preflight": false
+      },
+      "theme": {
+        "extend": {
+          "colors": {
+            "cal-bg": "#0a0a0a",
+            "cal-surface": "#141414",
+            "cal-elevated": "#1a1a1a",
+            "cal-border": "#262626",
+            "cal-muted": "#a3a3a3",
+            "cal-subtle": "#737373",
+            "cal-accent": "#ffffff"
+          },
+          "fontFamily": {
+            "sans": [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "sans-serif"
+            ]
+          }
+        }
+      }
+    },
+    "demoScript": {
+      "keyframes": [
+        {
+          "t": 0,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 0,
+          "x": 50,
+          "y": 45,
+          "hover": true
+        },
+        {
+          "t": 1.1199999999999999,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 1.2,
+          "x": 50,
+          "y": 45,
+          "click": true
+        },
+        {
+          "t": 2.5,
+          "x": 50,
+          "y": 45,
+          "hover": true
+        },
+        {
+          "t": 3.7199999999999998,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 3.8,
+          "x": 50,
+          "y": 45,
+          "click": true
+        },
+        {
+          "t": 4.3,
+          "x": 50,
+          "y": 45
+        }
+      ],
+      "camera": {
+        "keyframes": [
+          {
+            "t": 0,
+            "target": "main",
+            "scale": 1,
+            "padding": 44,
+            "phase": "establish"
+          },
+          {
+            "t": 0,
+            "target": "trigger",
+            "scale": 1.14,
+            "padding": 28,
+            "phase": "isolate"
+          },
+          {
+            "t": 1,
+            "target": "trigger",
+            "scale": 1.18,
+            "padding": 28,
+            "phase": "click"
+          },
+          {
+            "t": 1.5,
+            "target": "main",
+            "scale": 1.2,
+            "padding": 28,
+            "phase": "type"
+          },
+          {
+            "t": 4.3,
+            "target": "main",
+            "scale": 1.12,
+            "padding": 32,
+            "phase": "payoff"
+          }
+        ]
+      },
+      "hoverAt": 0,
+      "actions": [
+        {
+          "at": 0,
+          "type": "hover",
+          "target": "main",
+          "component": "ThinkingIndicator",
+          "label": "component body"
+        },
+        {
+          "at": 1.2,
+          "type": "click",
+          "target": "main",
+          "component": "ThinkingIndicator",
+          "label": "component body",
+          "effect": "none"
+        },
+        {
+          "at": 2.5,
+          "type": "hover",
+          "target": "main",
+          "component": "ThinkingIndicator",
+          "label": "component body"
+        },
+        {
+          "at": 3.8,
+          "type": "click",
+          "target": "main",
+          "component": "ThinkingIndicator",
+          "label": "component body",
+          "effect": "none"
+        }
+      ],
+      "demoText": "The ThinkingIndicator displays a pulsing 'Thinking…' label while the assistant is generating a response, providing subtle visual feedback during processing.",
+      "redirectDemoText": "Holiday coverage",
+      "interactionPlan": [],
+      "storyBeat": null,
+      "submitAt": null,
+      "payoffAt": null,
+      "phaseTimeline": {
+        "phases": [],
+        "hoverAt": 0,
+        "openAt": null,
+        "typeAt": null,
+        "dropdownAt": null,
+        "submitAt": null,
+        "payoffAt": null,
+        "expandAt": null
+      },
+      "expandAt": 1.2,
+      "demoBeats": [],
+      "elementRegistry": [
+        {
+          "ref": "ThinkingIndicator@main:component-body",
+          "component": "ThinkingIndicator",
+          "path": "/src/features/ask-cal/components/MessageBubble.tsx",
+          "componentRole": "focus",
+          "role": "main",
+          "label": "component body"
+        }
+      ],
+      "type": "static"
+    },
+    "registryVersion": 1782640307922
+  },
+  "s4": {
+    "slideId": "s4",
+    "styles": "#pr-preview-root {\n  margin: 0;\n  background: #0a0a0a;\n  color: #fafafa;\n  font-family: Inter, system-ui, sans-serif;\n  -webkit-font-smoothing: antialiased;\n  color-scheme: dark;\n}\n#pr-preview-root *, #pr-preview-root *::before, #pr-preview-root *::after { box-sizing: border-box; }\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.18;\n  filter: blur(4px);\n  transform: scale(0.98);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-focus-ref] [data-demo-ref] {\n  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-hide-rest=\"true\"] [data-demo-ref] {\n  opacity: 0.12;\n  filter: blur(2px);\n  pointer-events: none;\n}\n\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-region=\"main-content\"] {\n  opacity: 0.22;\n  filter: blur(3px);\n  transform: scale(0.985);\n  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease;\n  pointer-events: none;\n}\n#pr-preview-root[data-demo-phase=\"establish\"] [data-demo-region=\"main-content\"] {\n  opacity: 1;\n  filter: none;\n  transform: none;\n}\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-phase=\"click\"] [data-demo-target=\"trigger\"],\n#pr-preview-root[data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"] {\n  position: relative;\n  z-index: 30;\n  transform: scale(1.04);\n  transition: transform 0.25s ease, box-shadow 0.25s ease;\n}\n#pr-preview-root[data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"isolate\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"],\n#pr-preview-root[data-demo-phase=\"hover\"] [data-demo-highlight=\"button\"] [data-demo-target=\"button\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"trigger\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"trigger\"] [data-demo-target=\"trigger\"],\n#pr-preview-root [data-demo-highlight=\"trigger\"] button.bg-white {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.18);\n}\n#pr-preview-root [data-demo-target=\"input\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"input\"] [data-demo-target=\"input\"],\n#pr-preview-root [data-demo-highlight=\"input\"] input {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"dropdown\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"dropdown\"] [data-demo-target=\"dropdown\"],\n#pr-preview-root [data-demo-highlight=\"dropdown\"] select {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-target=\"submit\"].demo-active,\n#pr-preview-root [data-demo-highlight=\"submit\"] [data-demo-target=\"submit\"] {\n  outline: 2px solid rgba(165, 180, 252, 0.9);\n  outline-offset: 2px;\n}\n#pr-preview-root [data-demo-phase=\"payoff\"] .space-y-4 > :last-child {\n  animation: demoPayoffIn 0.45s ease-out both;\n}\n@keyframes demoPayoffIn {\n  from { opacity: 0; transform: translateY(8px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n#pr-preview-root .bg-cal-bg { background-color: #0a0a0a !important; }\n#pr-preview-root .text-cal-bg { color: #0a0a0a !important; }\n#pr-preview-root .border-cal-bg { border-color: #0a0a0a !important; }\n#pr-preview-root .ring-cal-bg { --tw-ring-color: #0a0a0a; }\n#pr-preview-root .ring-offset-cal-bg { --tw-ring-offset-color: #0a0a0a; }\n#pr-preview-root .placeholder\\:text-cal-bg::placeholder { color: #0a0a0a !important; }\n#pr-preview-root .hover\\:text-cal-bg:hover { color: #0a0a0a !important; }\n#pr-preview-root .bg-cal-surface { background-color: #141414 !important; }\n#pr-preview-root .text-cal-surface { color: #141414 !important; }\n#pr-preview-root .border-cal-surface { border-color: #141414 !important; }\n#pr-preview-root .ring-cal-surface { --tw-ring-color: #141414; }\n#pr-preview-root .ring-offset-cal-surface { --tw-ring-offset-color: #141414; }\n#pr-preview-root .placeholder\\:text-cal-surface::placeholder { color: #141414 !important; }\n#pr-preview-root .hover\\:text-cal-surface:hover { color: #141414 !important; }\n#pr-preview-root .bg-cal-elevated { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-elevated { color: #1a1a1a !important; }\n#pr-preview-root .border-cal-elevated { border-color: #1a1a1a !important; }\n#pr-preview-root .ring-cal-elevated { --tw-ring-color: #1a1a1a; }\n#pr-preview-root .ring-offset-cal-elevated { --tw-ring-offset-color: #1a1a1a; }\n#pr-preview-root .placeholder\\:text-cal-elevated::placeholder { color: #1a1a1a !important; }\n#pr-preview-root .hover\\:text-cal-elevated:hover { color: #1a1a1a !important; }\n#pr-preview-root .bg-cal-border { background-color: #262626 !important; }\n#pr-preview-root .text-cal-border { color: #262626 !important; }\n#pr-preview-root .border-cal-border { border-color: #262626 !important; }\n#pr-preview-root .ring-cal-border { --tw-ring-color: #262626; }\n#pr-preview-root .ring-offset-cal-border { --tw-ring-offset-color: #262626; }\n#pr-preview-root .placeholder\\:text-cal-border::placeholder { color: #262626 !important; }\n#pr-preview-root .hover\\:text-cal-border:hover { color: #262626 !important; }\n#pr-preview-root .bg-cal-muted { background-color: #a3a3a3 !important; }\n#pr-preview-root .text-cal-muted { color: #a3a3a3 !important; }\n#pr-preview-root .border-cal-muted { border-color: #a3a3a3 !important; }\n#pr-preview-root .ring-cal-muted { --tw-ring-color: #a3a3a3; }\n#pr-preview-root .ring-offset-cal-muted { --tw-ring-offset-color: #a3a3a3; }\n#pr-preview-root .placeholder\\:text-cal-muted::placeholder { color: #a3a3a3 !important; }\n#pr-preview-root .hover\\:text-cal-muted:hover { color: #a3a3a3 !important; }\n#pr-preview-root .bg-cal-subtle { background-color: #737373 !important; }\n#pr-preview-root .text-cal-subtle { color: #737373 !important; }\n#pr-preview-root .border-cal-subtle { border-color: #737373 !important; }\n#pr-preview-root .ring-cal-subtle { --tw-ring-color: #737373; }\n#pr-preview-root .ring-offset-cal-subtle { --tw-ring-offset-color: #737373; }\n#pr-preview-root .placeholder\\:text-cal-subtle::placeholder { color: #737373 !important; }\n#pr-preview-root .hover\\:text-cal-subtle:hover { color: #737373 !important; }\n#pr-preview-root .bg-cal-accent { background-color: #ffffff !important; }\n#pr-preview-root .text-cal-accent { color: #ffffff !important; }\n#pr-preview-root .border-cal-accent { border-color: #ffffff !important; }\n#pr-preview-root .ring-cal-accent { --tw-ring-color: #ffffff; }\n#pr-preview-root .ring-offset-cal-accent { --tw-ring-offset-color: #ffffff; }\n#pr-preview-root .placeholder\\:text-cal-accent::placeholder { color: #ffffff !important; }\n#pr-preview-root .hover\\:text-cal-accent:hover { color: #ffffff !important; }\n#pr-preview-root input, #pr-preview-root select, #pr-preview-root textarea {\n  background-color: #0a0a0a !important;\n  border-color: #262626 !important;\n  color: #fafafa !important;\n  color-scheme: dark;\n}\n#pr-preview-root option { background-color: #1a1a1a; color: #fafafa; }\n#pr-preview-root .bg-cal-elevated, #pr-preview-root [class*=\"bg-cal-elevated\"] { background-color: #1a1a1a !important; }\n#pr-preview-root .text-cal-muted, #pr-preview-root [class*=\"text-cal-muted\"] { color: #a3a3a3 !important; }",
+    "tailwindConfig": {
+      "important": "#pr-preview-root",
+      "corePlugins": {
+        "preflight": false
+      },
+      "theme": {
+        "extend": {
+          "colors": {
+            "cal-bg": "#0a0a0a",
+            "cal-surface": "#141414",
+            "cal-elevated": "#1a1a1a",
+            "cal-border": "#262626",
+            "cal-muted": "#a3a3a3",
+            "cal-subtle": "#737373",
+            "cal-accent": "#ffffff"
+          },
+          "fontFamily": {
+            "sans": [
+              "Inter",
+              "ui-sans-serif",
+              "system-ui",
+              "sans-serif"
+            ]
+          }
+        }
+      }
+    },
+    "demoScript": {
+      "keyframes": [
+        {
+          "t": 0,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 0.5,
+          "x": 50,
+          "y": 45,
+          "hover": true
+        },
+        {
+          "t": 1.1199999999999999,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 1.2,
+          "x": 50,
+          "y": 45,
+          "click": true
+        },
+        {
+          "t": 2,
+          "x": 50,
+          "y": 45,
+          "hover": true
+        },
+        {
+          "t": 2.7199999999999998,
+          "x": 50,
+          "y": 45
+        },
+        {
+          "t": 2.8,
+          "x": 50,
+          "y": 45,
+          "click": true
+        },
+        {
+          "t": 3.3,
+          "x": 50,
+          "y": 45
+        }
+      ],
+      "camera": {
+        "keyframes": [
+          {
+            "t": 0,
+            "target": "main",
+            "scale": 1,
+            "padding": 44,
+            "phase": "establish"
+          },
+          {
+            "t": 0.5,
+            "target": "trigger",
+            "scale": 1.14,
+            "padding": 28,
+            "phase": "isolate"
+          },
+          {
+            "t": 1,
+            "target": "trigger",
+            "scale": 1.18,
+            "padding": 28,
+            "phase": "click"
+          },
+          {
+            "t": 1.5,
+            "target": "main",
+            "scale": 1.2,
+            "padding": 28,
+            "phase": "type"
+          },
+          {
+            "t": 3.3,
+            "target": "main",
+            "scale": 1.12,
+            "padding": 32,
+            "phase": "payoff"
+          }
+        ]
+      },
+      "hoverAt": 0.5,
+      "actions": [
+        {
+          "at": 0.5,
+          "type": "hover",
+          "target": "main",
+          "component": "MessageActions",
+          "label": "component body",
+          "effect": "hoverReveal"
+        },
+        {
+          "at": 1.2,
+          "type": "click",
+          "target": "main",
+          "component": "MessageActions",
+          "label": "component body",
+          "effect": "highlight"
+        },
+        {
+          "at": 2,
+          "type": "hover",
+          "target": "main",
+          "component": "MessageActions",
+          "label": "component body",
+          "effect": "hoverReveal"
+        },
+        {
+          "at": 2.8,
+          "type": "click",
+          "target": "main",
+          "component": "MessageActions",
+          "label": "component body",
+          "effect": "highlight"
+        }
+      ],
+      "demoText": "Hover over a message to reveal thumbs up, thumbs down, and copy actions. Click to give feedback or copy the message content.",
+      "redirectDemoText": "Holiday coverage",
+      "interactionPlan": [],
+      "storyBeat": null,
+      "submitAt": null,
+      "payoffAt": null,
+      "phaseTimeline": {
+        "phases": [],
+        "hoverAt": 0.5,
+        "openAt": null,
+        "typeAt": null,
+        "dropdownAt": null,
+        "submitAt": null,
+        "payoffAt": null,
+        "expandAt": null
+      },
+      "expandAt": 1.2,
+      "demoBeats": [],
+      "elementRegistry": [
+        {
+          "ref": "MessageActions@main:component-body",
+          "component": "MessageActions",
+          "path": "/src/features/ask-cal/components/MessageActions.tsx",
+          "componentRole": "focus",
+          "role": "main",
+          "label": "component body"
+        }
+      ],
+      "type": "static"
+    },
+    "registryVersion": 1782640307922
+  }
+}

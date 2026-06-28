@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-06-27T22:45:09.125Z",
+  "promoData": {
+    "title": "Launch: AI-Powered Dashboard v2",
+    "description": "Introducing our new dashboard with real-time analytics, dark mode, and custom widgets.",
+    "productName": "AI-Powered Dashboard v2",
+    "tagline": "Introducing our new dashboard with real-time analytics, dark mode, and custom widgets.",
+    "features": [
+      "Real-time data",
+      "Dark mode",
+      "Drag-and-drop widgets"
+    ],
+    "assets": [
+      {
+        "name": "logo",
+        "path": "src/assets/logo.png"
+      },
+      {
+        "name": "screenshot",
+        "path": "src/assets/dashboard.png"
+      }
+    ],
+    "brand": {
+      "primaryColor": "#4F46E5",
+      "font": "Inter",
+      "cta": "Try it now at example.com"
+    },
+    "sourceUrl": null
+  },
+  "props": {
+    "productName": "AI-Powered Dashboard v2",
+    "tagline": "Introducing our new dashboard with real-time analytics, dark mode, and custom widgets.",
+    "features": [
+      "Real-time data",
+      "Dark mode",
+      "Drag-and-drop widgets"
+    ],
+    "logoPath": "",
+    "screenshotPath": "",
+    "primaryColor": "#4F46E5",
+    "font": "Inter",
+    "cta": "Try it now at example.com"
+  }
+}
